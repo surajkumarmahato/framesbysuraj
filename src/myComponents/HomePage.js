@@ -2,14 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../skmlogo.png"; // ensure correct logo path
 
-export default function HomePage() 
-{
+export default function HomePage() {
   return (
     <div
       style={{
         fontFamily: "Poppins, sans-serif",
-        backgroundColor: "#f9f9f9", // light grey background
-        color: "#333", // dark grey text
+        backgroundColor: "#f9f9f9",
+        color: "#333",
         overflowX: "hidden",
       }}
     >
@@ -17,12 +16,13 @@ export default function HomePage()
       <nav
         className="navbar navbar-expand-lg navbar-light py-1 shadow-sm"
         style={{
-          backgroundColor: "#ffffff", // white navbar
+          backgroundColor: "#ffffff",
           backdropFilter: "blur(10px)",
         }}
       >
         <div className="container">
-          <a className="navbar-brand d-flex align-items-center" href="#">
+          {/* ✅ Fixed invalid href */}
+          <a className="navbar-brand d-flex align-items-center" href="/">
             <img
               src={logo}
               alt="FramesBySuraj Logo"
@@ -122,7 +122,8 @@ export default function HomePage()
           Our Work
         </h2>
         <p className="text-center text-secondary mb-5">
-          A blend of cinematic reels and landscape captures every frame tells a story
+          A blend of cinematic reels and landscape captures — every frame tells
+          a story.
         </p>
 
         <div className="row g-5 justify-content-center">
@@ -143,25 +144,25 @@ export default function HomePage()
                   transition: "transform 0.3s ease",
                 }}
               >
-
-
+                {/* ✅ Added unique title */}
                 <iframe
                   src={src}
                   allow="autoplay"
+                  title={`landscape-video-${index}`}
                   className="w-100 h-100 rounded-4"
                   style={{ border: "none", objectFit: "cover" }}
                 ></iframe>
               </div>
             </div>
           ))}
-          
-                    {/* 🎥 Reels */}
+
+          {/* 🎥 Reels */}
           {[
             "https://drive.google.com/file/d/14Myx0ycIHWaZeMqkZf19MZUqTas8aecV/preview",
             "https://drive.google.com/file/d/1gfImg9CGgBNqUnkZUny6IEME8OmQem6j/preview",
             "https://drive.google.com/file/d/1Pqy3sVBUJDPcaEHH6gTR9lcFGlVEJwFU/preview",
           ].map((src, index) => (
-            <div className="col-md-4 col-sm-6" key={index}>
+            <div className="col-md-4 col-sm-6" key={`reel-${index}`}>
               <div
                 className="card bg-white border-0 shadow-lg"
                 style={{
@@ -171,16 +172,17 @@ export default function HomePage()
                   transition: "transform 0.3s ease",
                 }}
               >
+                {/* ✅ Added unique title */}
                 <iframe
                   src={src}
                   allow="autoplay"
+                  title={`reel-video-${index}`}
                   className="w-100 h-100 rounded-4"
                   style={{ border: "none", objectFit: "cover" }}
                 ></iframe>
               </div>
             </div>
           ))}
-
         </div>
       </section>
 
@@ -195,10 +197,12 @@ export default function HomePage()
       >
         <h2 className="fw-bold mb-3 text-dark">Let’s Connect</h2>
         <p className="text-secondary mb-4">
-          Want to collaborate or book a shoot? Reach out to me anytime
+          Want to collaborate or book a shoot? Reach out to me anytime.
         </p>
         <a
           href="https://www.instagram.com/framesbysuraj"
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-dark px-4 py-2 rounded-pill fw-semibold"
         >
           Say Hello
