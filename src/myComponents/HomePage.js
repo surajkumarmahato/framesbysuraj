@@ -2,8 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../skmlogo.png"; // ensure correct logo path
 
-
-export default function HomePage() {
+export default function HomePage() 
+{
   return (
     <div
       style={{
