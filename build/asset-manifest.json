@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.38890119.css",
+    "main.js": "/static/js/main.bd0e42ce.js",
+    "static/js/453.d7d231f8.chunk.js": "/static/js/453.d7d231f8.chunk.js",
+    "static/media/skmlogo.png": "/static/media/skmlogo.efd5ee37b62e3fa0d53e.png",
+    "index.html": "/index.html",
+    "main.38890119.css.map": "/static/css/main.38890119.css.map",
+    "main.bd0e42ce.js.map": "/static/js/main.bd0e42ce.js.map",
+    "453.d7d231f8.chunk.js.map": "/static/js/453.d7d231f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38890119.css",
+    "static/js/main.bd0e42ce.js"
+  ]
+}
